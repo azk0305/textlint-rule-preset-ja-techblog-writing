@@ -1,0 +1,49 @@
+{
+  "name": "textlint-rule-preset-ja-techblog-writing",
+  "version": "1.0.0",
+  "description": "QiitaやZennのような技術ブログへ記事を投稿する際に利用するtextlintルールプリセット",
+  "keywords": [
+    "textlintrule"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "azmnc"
+  },
+  "license": "MIT",
+  "author": "azmnc",
+  "type": "commonjs",
+  "main": "lib/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "files": [
+    "lib/",
+    "src/"
+  ],
+  "scripts": {
+    "test": "textlint-scripts test",
+    "build": "textlint-scripts build",
+    "prepublish": "npm run --if-present build",
+    "watch": "textlint-scripts build --watch"
+  },
+  "devDependencies": {
+    "@textlint/types": "^15.7.1",
+    "@types/node": "^20.19.43",
+    "textlint": "^15.7.1",
+    "textlint-scripts": "^15.7.1",
+    "textlint-tester": "^15.7.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  },
+  "overrides": {
+    "diff": "^8.0.3",
+    "js-yaml": "^4.1.1",
+    "mocha": "^11.0.0",
+    "serialize-javascript": "^7.0.5"
+  },
+  "dependencies": {
+    "@textlint-ja/textlint-rule-preset-ai-writing": "^1.7.0",
+    "textlint-rule-preset-ja-technical-writing": "^12.0.2",
+    "textlint-rule-prh": "^6.1.0"
+  }
+}

@@ -1,0 +1,1154 @@
+version: 1
+rules:
+  - expected: あらかじめ
+    pattern:
+      - 予め
+    prh: >-
+      平仮名にしたほうが読みやすい漢字は平仮名にする
+    specs:
+      - from: 予め
+        to: あらかじめ
+  - expected: いたします
+    pattern:
+      - 致します
+    prh: >-
+      平仮名にしたほうが読みやすい漢字は平仮名にする
+    specs:
+      - from: 致します
+        to: いたします
+  - expected: いただ$1
+    pattern:
+      - /頂([いかきくけこ])/
+    prh: >-
+      平仮名にしたほうが読みやすい漢字は平仮名にする
+    specs:
+      - from: 頂い
+        to: いただい
+      - from: 頂か
+        to: いただか
+      - from: 頂く
+        to: いただく
+      - from: 頂き
+        to: いただき
+      - from: 頂け
+        to: いただけ
+      - from: 頂こ
+        to: いただこ
+  - expected: および
+    pattern:
+      - 及び
+    prh: >-
+      平仮名にしたほうが読みやすい漢字は平仮名にする
+    specs:
+      - from: 及び
+        to: および
+  - expected: ください
+    pattern:
+      - 下さい
+    prh: >-
+      平仮名にしたほうが読みやすい漢字は平仮名にする
+    specs:
+      - from: 下さい
+        to: ください
+  - expected: ご存じ
+    pattern:
+      - ご存知
+    prh: >-
+      平仮名にしたほうが読みやすい漢字は平仮名にする
+    specs:
+      - from: ご存知
+        to: ご存じ
+  - expected: さきほど
+    pattern:
+      - 先程
+    prh: >-
+      平仮名にしたほうが読みやすい漢字は平仮名にする
+    specs:
+      - from: 先程
+        to: さきほど
+  - expected: さまざま
+    pattern:
+      - 様々
+    prh: >-
+      平仮名にしたほうが読みやすい漢字は平仮名にする
+    specs:
+      - from: 様々
+        to: さまざま
+  - expected: すでに
+    pattern:
+      - 既に
+    prh: >-
+      平仮名にしたほうが読みやすい漢字は平仮名にする
+    specs:
+      - from: 既に
+        to: すでに
+  - expected: すなわち
+    pattern:
+      - 即ち
+    prh: >-
+      平仮名にしたほうが読みやすい漢字は平仮名にする
+    specs:
+      - from: 即ち
+        to: すなわち
+  - expected: すべて
+    pattern:
+      - 全て
+    prh: >-
+      平仮名にしたほうが読みやすい漢字は平仮名にする
+    specs:
+      - from: 全て
+        to: すべて
+  - expected: たくさん
+    pattern:
+      - 沢山
+    prh: >-
+      平仮名にしたほうが読みやすい漢字は平仮名にする
+    specs:
+      - from: 沢山
+        to: たくさん
+  - expected: ただ
+    pattern:
+      - 只
+    prh: >-
+      平仮名にしたほうが読みやすい漢字は平仮名にする
+    specs:
+      - from: 只
+        to: ただ
+  - expected: ただし
+    pattern:
+      - 但し
+    prh: >-
+      平仮名にしたほうが読みやすい漢字は平仮名にする
+    specs:
+      - from: 但し
+        to: ただし
+  - expected: ため$1
+    pattern:
+      - /為([にで])/
+    prh: >-
+      平仮名にしたほうが読みやすい漢字は平仮名にする
+    specs:
+      - from: 為です
+        to: ためです
+  - expected: など$1
+    pattern:
+      - /(?<!同)等([をのが、])/
+    prh: >-
+      平仮名にしたほうが読みやすい漢字は平仮名にする
+    specs:
+      - from: 住所等を入力
+        to: 住所などを入力
+  - expected: ならびに
+    pattern:
+      - /(?<![横縦])並びに/
+    prh: >-
+      平仮名にしたほうが読みやすい漢字は平仮名にする
+    specs:
+      - from: 並びに
+        to: ならびに
+  - expected: まず
+    pattern:
+      - 先ず
+    prh: >-
+      平仮名にしたほうが読みやすい漢字は平仮名にする
+    specs:
+      - from: 先ず
+        to: まず
+  - expected: まで
+    pattern:
+      - 迄
+    prh: >-
+      平仮名にしたほうが読みやすい漢字は平仮名にする
+    specs:
+      - from: 迄
+        to: まで
+  - expected: もって
+    pattern:
+      - 以て
+    prh: >-
+      平仮名にしたほうが読みやすい漢字は平仮名にする
+    specs:
+      - from: 以て
+        to: もって
+  - expected: もっとも
+    pattern:
+      - 尤も
+    prh: >-
+      平仮名にしたほうが読みやすい漢字は平仮名にする
+    specs:
+      - from: 尤も
+        to: もっとも
+  - expected: でき$1
+    pattern:
+      - /出来([かがのをは過す損ずなまるたれてそ])/
+    prh: >-
+      平仮名にしたほうが読みやすい漢字は平仮名にする
+    specs:
+      - from: 出来る
+        to: できる
+  - expected: のなかで
+    pattern:
+      - の中で
+    prh: >-
+      平仮名にしたほうが読みやすい漢字は平仮名にする
+    specs:
+      - from: 文章の中で
+        to: 文章のなかで
+  - expected: CSVファイル
+    pattern:
+      - csvファイル
+    prh: >-
+      「◯◯ファイル」の◯◯の部分は大文字で表記し、拡張子は省略する
+    specs:
+      - from: csvファイル
+        to: CSVファイル
+  - expected: PDFファイル
+    pattern:
+      - pdfファイル
+    prh: >-
+      「◯◯ファイル」の◯◯の部分は大文字で表記し、拡張子は省略する
+    specs:
+      - from: pdfファイル
+        to: PDFファイル
+  - expected: ZIPファイル
+    pattern:
+      - zipファイル
+    prh: >-
+      「◯◯ファイル」の◯◯の部分は大文字で表記し、拡張子は省略する
+    specs:
+      - from: zipファイル
+        to: ZIPファイル
+  - expected: アイコン
+    pattern:
+      - >-
+        /(?<!ウォーター|ベル|チェック|サービス|ランド|ロゴ|合意済み|合意済|破棄済み|破棄済|合意|合意前|「合意済み」|「破棄済み」|見本|アット|ブック)マーク(?![ァ-ヶ])(?=.*)/
+    prh: >-
+      「マーク」ではなく「アイコン」と表記する
+    specs:
+      - from: マーク
+        to: アイコン
+  - expected: アクセシビリティ
+    pattern:
+      - アクセシビリティー
+    prh: >-
+      ‐er、‐or、‐arで終わる単語は「長音あり」、-yで終わる単語は「長音なし」とする（例外あり）
+    specs:
+      - from: アクセシビリティー
+        to: アクセシビリティ
+  - expected: あとで
+    pattern:
+      - /(?<![始了直前])後で/
+    prh: >-
+      平仮名にしたほうが読みやすい漢字は平仮名にする
+    specs:
+      - from: 後でやります。
+        to: あとでやります。
+      - from: 評価開始後でも編集できます。
+        to: 評価開始後でも編集できます。
+      - from: 30分前後で回答します。
+        to: 30分前後で回答します。
+  - expected: したうえで
+    pattern:
+      - した上で
+    prh: >-
+      平仮名にしたほうが読みやすい漢字は平仮名にする
+    specs:
+      - from: した上で
+        to: したうえで
+  - expected: $1さま
+    pattern:
+      - /(従業員|お客|ユーザー|皆)様/
+    prh: >-
+      平仮名にしたほうが読みやすい漢字は平仮名にする
+    specs:
+      - from: 従業員様
+        to: 従業員さま
+      - from: お客様
+        to: お客さま
+      - from: ユーザー様
+        to: ユーザーさま
+      - from: 皆様
+        to: 皆さま
+  - expected: あ$1
+    pattern:
+      - /有(っ|り|る|れ|ろ)/
+    prh: |-
+      平仮名にしたほうが読みやすい漢字は平仮名にする
+    specs:
+      - from: 有った
+        to: あった
+      - from: 有り
+        to: あり
+      - from: 有る
+        to: ある
+      - from: 有れば
+        to: あれば
+      - from: 有ろう
+        to: あろう
+  - expected: あわせて
+    pattern:
+      - /(?<![を|と|に|へ|は|も|組み|問い|掛け])(合わせて|併せて)/
+    prh: >-
+      「あわせて」は平仮名で表記する
+    specs:
+      - from: 合わせて
+        to: あわせて
+      - from: 併せて
+        to: あわせて
+      - from: AとBを併せて入力
+        to: AとBを併せて入力
+      - from: 問い合わせて
+        to: 問い合わせて
+  - expected: 取り消し
+    pattern:
+      - 取消
+    prh: >-
+      送りがなを付けて表記する
+    specs:
+      - from: 取消
+        to: 取り消し
+  - expected: 差し戻し
+    pattern:
+      - 差戻し
+    prh: >-
+      送りがなを付けて表記する
+    specs:
+      - from: 差戻し
+        to: 差し戻し
+  - expected: 何卒
+    pattern:
+      - 何とぞ
+    prh: >-
+      平仮名にしたほうが読みやすい漢字は平仮名にする
+    specs:
+      - from: 何とぞ
+        to: 何卒
+  - expected: 並べ替え
+    pattern:
+      - 並び替え
+    specs:
+      - from: 並び替え
+        to: 並べ替え
+  - expected: をもとに
+    pattern:
+      - を基に
+    prh: >-
+      拠り所や根拠を示す「もと」は平仮名で表記する
+    specs:
+      - from: 〜を基に入力する
+        to: 〜をもとに入力する
+  - expected: 元$1戻
+    pattern:
+      - /もと([にへ])戻/
+    prh: >-
+      前の工程に戻る場合の「元」は漢字で表記する
+    specs:
+      - from: もとに戻す
+        to: 元に戻す
+  - expected: $1！
+    pattern:
+      - >-
+        /([\u3400-\u4DBF\u4E00-\u9FFF\uF900-\uFAFF]|[\uD840-\uD87F][\uDC00-\uDFFF]|[ぁ-んァ-ヶ])![^!\?]/
+    prh: >-
+      「！」と「？」は単独で使う場合は全角、ペアで使う場合は半角で表記する
+  - expected: $1？
+    pattern:
+      - >-
+        /([\u3400-\u4DBF\u4E00-\u9FFF\uF900-\uFAFF]|[\uD840-\uD87F][\uDC00-\uDFFF]|[ぁ-んァ-ヶ])\?[^!\?]/
+    prh: >-
+      「！」と「？」は単独で使う場合は全角、ペアで使う場合は半角で表記する
+  - expected: "!!"
+    pattern:
+      - ！！
+    prh: >-
+      「！」と「？」は単独で使う場合は全角、ペアで使う場合は半角で表記する
+    specs:
+      - from: ！！
+        to: "!!"
+  - expected: "!?"
+    pattern:
+      - ！？
+    prh: >-
+      「！」と「？」は単独で使う場合は全角、ペアで使う場合は半角で表記する
+    specs:
+      - from: ！？
+        to: "!?"
+  - expected: "??"
+    pattern:
+      - ？？
+    prh: >-
+      「！」と「？」は単独で使う場合は全角、ペアで使う場合は半角で表記する
+    specs:
+      - from: ？？
+        to: "??"
+  - expected: 改善
+    pattern:
+      - カイゼン
+    prh: >-
+      「改善」と漢字で表記し、「カイゼン」の使用は控える
+    specs:
+      - from: カイゼンしました
+        to: 改善しました
+  - expected: GB
+    pattern:
+      - ギガバイト
+    prh: >-
+      ファイルサイズは基本的に英字2文字で表記する
+    specs:
+      - from: ギガバイト
+        to: GB
+  - expected: KB
+    pattern:
+      - キロバイト
+    prh: >-
+      ファイルサイズは基本的に英字2文字で表記する
+    specs:
+      - from: 1キロバイト
+        to: 1KB
+  - expected: クエリ
+    pattern:
+      - クエリー
+    prh: >-
+      ‐er、‐or、‐arで終わる単語は「長音あり」、-yで終わる単語は「長音なし」とする（例外あり）
+    specs:
+      - from: クエリー
+        to: クエリ
+  - expected: ごと$1
+    pattern:
+      - /毎([にので])/
+    prh: >-
+      平仮名にしたほうが読みやすい漢字は平仮名にする
+    specs:
+      - from: 口座毎に
+        to: 口座ごとに
+      - from: 項目毎の
+        to: 項目ごとの
+      - from: フォーム毎で
+        to: フォームごとで
+  - expected: サーバー
+    pattern:
+      - /サーバ(?!ー)/
+    prh: >-
+      ‐er、‐or、‐arで終わる単語は「長音あり」、-yで終わる単語は「長音なし」とする（例外あり）
+    specs:
+      - from: 受信サーバに拒否されました
+        to: 受信サーバーに拒否されました
+  - expected: さら$1
+    pattern:
+      - /(?<!変)更(に|なる)/
+    prh: >-
+      平仮名にしたほうが読みやすい漢字は平仮名にする
+    specs:
+      - from: 更に
+        to: さらに
+      - from: 更なる
+        to: さらなる
+  - expected: しばらく
+    pattern:
+      - 暫く
+    prh: >-
+      平仮名にしたほうが読みやすい漢字は平仮名にする
+    specs:
+      - from: 暫く
+        to: しばらく
+  - expected: スマートフォン
+    pattern:
+      - スマートホン
+      - スマフォ
+      - スマホ
+    prh: >-
+      「スマートフォン」と表現し、「スマホ」などの表現は控える
+    specs:
+      - from: スマートホン
+        to: スマートフォン
+      - from: スマフォ
+        to: スマートフォン
+      - from: スマホ
+        to: スマートフォン
+  - expected: セキュリティ
+    pattern:
+      - セキュリティー
+    prh: >-
+      ‐er、‐or、‐arで終わる単語は「長音あり」、-yで終わる単語は「長音なし」とする（例外あり）
+    specs:
+      - from: セキュリティー
+        to: セキュリティ
+  - expected: ぜひ
+    pattern:
+      - /是非(?!を|に|にも)/
+    prh: >-
+      平仮名にしたほうが読みやすい漢字は平仮名にする
+    specs:
+      - from: 是非
+        to: ぜひ
+  - expected: ソフトウェア
+    pattern:
+      - ソフトウエア
+    prh: >-
+      「ウィ/ウェ/ウォ」を使用する
+    specs:
+      - from: ソフトウエア
+        to: ソフトウェア
+  - expected: タイポグラフィ
+    pattern:
+      - タイポグラフィー
+    prh: >-
+      ‐er、‐or、‐arで終わる単語は「長音あり」、-yで終わる単語は「長音なし」とする（例外あり）
+    specs:
+      - from: タイポグラフィー
+        to: タイポグラフィ
+  - expected: つけ$1
+    pattern:
+      - /(?<!受け|貼り|紐)付け([なてるれよ])/
+    prh: >-
+      平仮名にしたほうが読みやすい漢字は平仮名にする
+    specs:
+      - from: 付けない
+        to: つけない
+      - from: 付けて
+        to: つけて
+      - from: 付ける
+        to: つける
+      - from: 付ければ
+        to: つければ
+      - from: 付けよう
+        to: つけよう
+  - expected: TB
+    pattern:
+      - テラバイト
+    prh: >-
+      ファイルサイズは基本的に英字2文字で表記する
+    specs:
+      - from: 1テラバイト
+        to: 1TB
+  - expected: 問い合わせ
+    pattern:
+      - 問合せ
+    prh: >-
+      送りがなを付けて表記する
+    specs:
+      - from: 問合せ
+        to: 問い合わせ
+  - expected: ともに
+    pattern:
+      - /(?<!公)共に/
+    prh: >-
+      平仮名にしたほうが読みやすい漢字は平仮名にする
+    specs:
+      - from: 共にする
+        to: ともにする
+      - from: 公共のために
+        to: 公共のために
+  - expected: な$1
+    pattern:
+      - /無(い|く|し|か|き|け)/
+    prh: >-
+      平仮名にしたほうが読みやすい漢字は平仮名にする
+    specs:
+      - from: 無かった場合
+        to: なかった場合
+      - from: 無くなる
+        to: なくなる
+      - from: 無いとき
+        to: ないとき
+      - from: 無し
+        to: なし
+      - from: 無き
+        to: なき
+      - from: 無ければ
+        to: なければ
+  - expected: ナンバー
+    pattern:
+      - /ナンバ(?!ー)/
+    prh: >-
+      ‐er、‐or、‐arで終わる単語は「長音あり」、-yで終わる単語は「長音なし」とする（例外あり）
+    specs:
+      - from: ナンバ
+        to: ナンバー
+  - expected: はじめて
+    pattern:
+      - 初めて
+      - 始めて
+    prh: >-
+      平仮名にしたほうが読みやすい漢字は平仮名にする
+    specs:
+      - from: 初めて
+        to: はじめて
+      - from: 始めて
+        to: はじめて
+  - expected: 1つ
+    pattern:
+      - 一つ
+      - ひとつ
+    prh: >-
+      数字は半角の算用数字で表記する
+    specs:
+      - from: 一つ
+        to: 1つ
+      - from: ひとつ
+        to: 1つ
+  - expected: 1人
+    pattern:
+      - /(?<!一人|同)(一人|ひとり)(?!ひとり|称|親)/
+    prh: >-
+      数字は半角の算用数字で表記する
+    specs:
+      - from: 一人を選択
+        to: 1人を選択
+      - from: ひとりを選択
+        to: 1人を選択
+  - expected: ひな形
+    pattern:
+      - 雛形
+    prh: >-
+      平仮名にしたほうが読みやすい漢字は平仮名にする
+    specs:
+      - from: 雛形
+        to: ひな形
+  - expected: 紐づ$1
+    pattern:
+      - /紐付([いかきけく])/
+    prh: >-
+      平仮名にしたほうが読みやすい漢字は平仮名にする
+    specs:
+      - from: 紐付いて
+        to: 紐づいて
+      - from: 紐付かない
+        to: 紐づかない
+      - from: 紐付きをhoge
+        to: 紐づきをhoge
+      - from: 紐付けて
+        to: 紐づけて
+      - from: 紐付くhoge
+        to: 紐づくhoge
+  - expected: フィルター
+    pattern:
+      - /フィルタ(?!(ー|リング))/
+    prh: >-
+      ‐er、‐or、‐arで終わる単語は「長音あり」、-yで終わる単語は「長音なし」とする（例外あり）
+    specs:
+      - from: フィルタ
+        to: フィルター
+      - from: フィルタリング
+        to: フィルタリング
+  - expected: フォルダ
+    pattern:
+      - フォルダー
+    prh: >-
+      ‐er、‐or、‐arで終わる単語は「長音あり」、-yで終わる単語は「長音なし」とする（例外あり）
+    specs:
+      - from: フォルダー
+        to: フォルダ
+  - expected: 2つ
+    pattern:
+      - 二つ
+      - ふたつ
+    prh: >-
+      数字は半角の算用数字で表記する
+    specs:
+      - from: 二つ
+        to: 2つ
+      - from: ふたつ
+        to: 2つ
+  - expected: フッター
+    pattern:
+      - /フッタ(?!ー)/
+    prh: >-
+      ‐er、‐or、‐arで終わる単語は「長音あり」、-yで終わる単語は「長音なし」とする（例外あり）
+    specs:
+      - from: フッタ
+        to: フッター
+  - expected: プライバシー
+    pattern:
+      - /プライバシィ?(?!ー)/
+    prh: >-
+      ‐er、‐or、‐arで終わる単語は「長音あり」、-yで終わる単語は「長音なし」とする（例外あり）
+    specs:
+      - from: プライバシ
+        to: プライバシー
+      - from: プライバシィ
+        to: プライバシー
+  - expected: ブラウザ
+    pattern:
+      - /(?<!ウェブ|Web|web|WEB)ブラウザー/
+    prh: >-
+      ‐er、‐or、‐arで終わる単語は「長音あり」、-yで終わる単語は「長音なし」とする（例外あり）
+    specs:
+      - from: ブラウザー
+        to: ブラウザ
+  - expected: プリンター
+    pattern:
+      - /プリンタ(?!ー)/
+    prh: >-
+      ‐er、‐or、‐arで終わる単語は「長音あり」、-yで終わる単語は「長音なし」とする（例外あり）
+    specs:
+      - from: プリンタ
+        to: プリンター
+  - expected: ヘッダー
+    pattern:
+      - /ヘッダ(?!ー)/
+    prh: >-
+      ‐er、‐or、‐arで終わる単語は「長音あり」、-yで終わる単語は「長音なし」とする（例外あり）
+    specs:
+      - from: ヘッダ
+        to: ヘッダー
+  - expected: ポリシー
+    pattern:
+      - /ポリシィ?(?!ー)/
+    prh: >-
+      ‐er、‐or、‐arで終わる単語は「長音あり」、-yで終わる単語は「長音なし」とする（例外あり）
+    specs:
+      - from: ポリシィ
+        to: ポリシー
+      - from: ポリシ
+        to: ポリシー
+  - expected: マスターデータ
+    pattern:
+      - /(?<!部署|役職|雇用形態|等級|続柄|給与支給形態|評価記号|］|スキル|資格|研修|カスタム|システム標準|ドメイン)マスタ(?!ー)(データ)?/
+      - /(?<!部署|役職|雇用形態|等級|続柄|給与支給形態|評価記号|］|スキル|資格|研修|カスタム|システム標準|ドメイン)マスター(?!データ)/
+    prh: >-
+      マスターデータの総称は「マスターデータ」、総称以外は「◯◯マスター」と表記する
+    specs:
+      - from: マスタ
+        to: マスターデータ
+      - from: マスタデータ
+        to: マスターデータ
+      - from: 部署マスター
+        to: 部署マスター
+      - from: 役職マスター
+        to: 役職マスター
+      - from: 雇用形態マスター
+        to: 雇用形態マスター
+      - from: 続柄マスター
+        to: 続柄マスター
+      - from: 評価記号マスター
+        to: 評価記号マスター
+      - from: 給与支給形態マスター
+        to: 給与支給形態マスター
+  - expected: マネージャー
+    pattern:
+      - /マネージャ(?!ー)/
+    prh: >-
+      ‐er、‐or、‐arで終わる単語は「長音あり」、-yで終わる単語は「長音なし」とする（例外あり）
+    specs:
+      - from: マネージャ
+        to: マネージャー
+  - expected: 見積もり
+    pattern:
+      - 見積り
+    prh: >-
+      送りがなを付けて表記する
+    specs:
+      - from: 見積り
+        to: 見積もり
+  - expected: MB
+    pattern:
+      - メガバイト
+    prh: >-
+      ファイルサイズは基本的に英字2文字で表記する
+    specs:
+      - from: 1メガバイト
+        to: 1MB
+  - expected: メンバー
+    pattern:
+      - /メンバ(?!ー)/
+    prh: >-
+      ‐er、‐or、‐arで終わる単語は「長音あり」、-yで終わる単語は「長音なし」とする（例外あり）
+    specs:
+      - from: メンバ
+        to: メンバー
+  - expected: ユーザー
+    pattern:
+      - /ユーザ(?!(ー|ビリティ))/
+    prh: >-
+      ‐er、‐or、‐arで終わる単語は「長音あり」、-yで終わる単語は「長音なし」とする（例外あり）
+    specs:
+      - from: ユーザ
+        to: ユーザー
+      - from: ユーザビリティ
+        to: ユーザビリティ
+  - expected: よろしく
+    pattern:
+      - 宜しく
+    prh: >-
+      平仮名にしたほうが読みやすい漢字は平仮名にする
+    specs:
+      - from: 宜しく
+        to: よろしく
+  - expected: レイヤー
+    pattern:
+      - /(?<!プ)レイヤ(?!ー)/
+    prh: >-
+      ‐er、‐or、‐arで終わる単語は「長音あり」、-yで終わる単語は「長音なし」とする（例外あり）
+    specs:
+      - from: レイヤ
+        to: レイヤー
+      - from: Flashプレイヤー
+        to: Flashプレイヤー
+  - expected: わか$2
+    pattern:
+      - /((?<![自区])分か(?!れる|れて|れた)|判|解)([らりるれっ])/
+    prh: >-
+      平仮名にしたほうが読みやすい漢字は平仮名にする
+    specs:
+      - from: 分からない
+        to: わからない
+      - from: 分かりやすい
+        to: わかりやすい
+      - from: 分かる
+        to: わかる
+      - from: 分かれば
+        to: わかれば
+      - from: 分かった
+        to: わかった
+      - from: 解らない
+        to: わからない
+      - from: 解りやすい
+        to: わかりやすい
+      - from: 解る
+        to: わかる
+      - from: 解れば
+        to: わかれば
+      - from: 解った
+        to: わかった
+      - from: 判らない
+        to: わからない
+      - from: 判りやすい
+        to: わかりやすい
+      - from: 判る
+        to: わかる
+      - from: 判れば
+        to: わかれば
+      - from: 判った
+        to: わかった
+  - expected: ⓪
+    pattern:
+      - /[🄋⓿🄌]/
+    prh: 丸数字は⓪（U+24EA）、①（U+2460）〜㊿（U+32BF）を使います。
+  - expected: ①
+    pattern:
+      - /[➀❶➊⓵]/
+    prh: 丸数字は⓪（U+24EA）、①（U+2460）〜㊿（U+32BF）を使います。
+  - expected: ②
+    pattern:
+      - /[➁❷➋⓶]/
+    prh: 丸数字は⓪（U+24EA）、①（U+2460）〜㊿（U+32BF）を使います。
+  - expected: ③
+    pattern:
+      - /[➂❸➌⓷]/
+    prh: 丸数字は⓪（U+24EA）、①（U+2460）〜㊿（U+32BF）を使います。
+  - expected: ④
+    pattern:
+      - /[➃❹➍⓸]/
+    prh: 丸数字は⓪（U+24EA）、①（U+2460）〜㊿（U+32BF）を使います。
+  - expected: ⑤
+    pattern:
+      - /[➄❺➎⓹]/
+    prh: 丸数字は⓪（U+24EA）、①（U+2460）〜㊿（U+32BF）を使います。
+  - expected: ⑥
+    pattern:
+      - /[➅❻➏⓺]/
+    prh: 丸数字は⓪（U+24EA）、①（U+2460）〜㊿（U+32BF）を使います。
+  - expected: ⑦
+    pattern:
+      - /[➆❼➐⓻]/
+    prh: 丸数字は⓪（U+24EA）、①（U+2460）〜㊿（U+32BF）を使います。
+  - expected: ⑧
+    pattern:
+      - /[➇❽➑⓼]/
+    prh: 丸数字は⓪（U+24EA）、①（U+2460）〜㊿（U+32BF）を使います。
+  - expected: ⑨
+    pattern:
+      - /[➈❾➒⓽]/
+    prh: 丸数字は⓪（U+24EA）、①（U+2460）〜㊿（U+32BF）を使います。
+  - expected: ⑩
+    pattern:
+      - /[➉❿➓⓾]/
+    prh: 丸数字は⓪（U+24EA）、①（U+2460）〜㊿（U+32BF）を使います。
+  - expected: ⑪
+    pattern:
+      - /[⓫]/
+    prh: 丸数字は⓪（U+24EA）、①（U+2460）〜㊿（U+32BF）を使います。
+  - expected: ⑫
+    pattern:
+      - /[⓬]/
+    prh: 丸数字は⓪（U+24EA）、①（U+2460）〜㊿（U+32BF）を使います。
+  - expected: ⑬
+    pattern:
+      - /[⓭]/
+    prh: 丸数字は⓪（U+24EA）、①（U+2460）〜㊿（U+32BF）を使います。
+  - expected: ⑭
+    pattern:
+      - /[⓮]/
+    prh: 丸数字は⓪（U+24EA）、①（U+2460）〜㊿（U+32BF）を使います。
+  - expected: ⑮
+    pattern:
+      - /[⓯]/
+    prh: 丸数字は⓪（U+24EA）、①（U+2460）〜㊿（U+32BF）を使います。
+  - expected: ⑯
+    pattern:
+      - /[⓰]/
+    prh: 丸数字は⓪（U+24EA）、①（U+2460）〜㊿（U+32BF）を使います。
+  - expected: ⑰
+    pattern:
+      - /[⓱]/
+    prh: 丸数字は⓪（U+24EA）、①（U+2460）〜㊿（U+32BF）を使います。
+  - expected: ⑱
+    pattern:
+      - /[⓲]/
+    prh: 丸数字は⓪（U+24EA）、①（U+2460）〜㊿（U+32BF）を使います。
+  - expected: ⑲
+    pattern:
+      - /[⓳]/
+    prh: 丸数字は⓪（U+24EA）、①（U+2460）〜㊿（U+32BF）を使います。
+  - expected: ⑳
+    pattern:
+      - /[⓴]/
+    prh: 丸数字は⓪（U+24EA）、①（U+2460）〜㊿（U+32BF）を使います。
+  - expected: 主な
+    pattern:
+      - おもな
+    specs:
+      - from: おもな作業はhogeです
+        to: 主な作業はhogeです
+  - expected: 主に
+    pattern:
+      - おもに
+    specs:
+      - from: おもに労務担当者が使用します
+        to: 主に労務担当者が使用します
+  - expected: システム標準マスター
+    pattern:
+      - /(システム標準マスターデータ|システム標準マスタ(?!ー))/
+    prh: >-
+      マスターデータの総称は「マスターデータ」、総称以外は「◯◯マスター」と表記する
+    specs:
+      - from: システム標準マスタ
+        to: システム標準マスター
+      - from: システム標準マスターデータ
+        to: システム標準マスター
+      - from: システム標準マスター
+        to: システム標準マスター
+  - expected: カスタムマスター
+    pattern:
+      - /(カスタムマスターデータ|カスタムマスタ(?!ー))/
+    prh: >-
+      マスターデータの総称は「マスターデータ」、総称以外は「◯◯マスター」と表記する
+    specs:
+      - from: カスタムマスタ
+        to: カスタムマスター
+      - from: カスタムマスターデータ
+        to: カスタムマスター
+      - from: カスタムマスター
+        to: カスタムマスター
+  - expected: ウェイト
+    pattern:
+      - ウエイト
+    prh: >-
+      「ウィ/ウェ/ウォ」を使用する
+    specs:
+      - from: 大きなウエイトを占める
+        to: 大きなウェイトを占める
+  - expected: 伴$1
+    pattern:
+      - /ともな([いうえおわっ])/
+    specs:
+      - from: ともない
+        to: 伴い
+      - from: ともなう
+        to: 伴う
+      - from: ともなえ
+        to: 伴え
+      - from: ともなおう
+        to: 伴おう
+      - from: ともなわない
+        to: 伴わない
+      - from: ともなって
+        to: 伴って
+  - expected: か所
+    pattern:
+      - /(?<![^\x01-\x7E])(ヶ|ケ|箇|個|ヵ|カ)所/
+    prh: >-
+      「か所」「か月」と表記する
+    specs:
+      - from: 3ヶ所
+        to: 3か所
+      - from: 3ケ所
+        to: 3か所
+      - from: 3箇所
+        to: 3か所
+      - from: 3個所
+        to: 3か所
+      - from: 3ヵ所
+        to: 3か所
+      - from: 3カ所
+        to: 3か所
+  - expected: か月
+    pattern:
+      - /ヶ月|ケ月|箇月|個月|ヵ月|カ月/
+    prh: >-
+      「か所」「か月」と表記する
+    specs:
+      - from: 給与明細が1ヶ月単位で発行されます
+        to: 給与明細が1か月単位で発行されます
+      - from: 給与明細が1箇月単位で発行されます
+        to: 給与明細が1か月単位で発行されます
+  - expected: 改$1
+    pattern:
+      - /あらた([めま])/
+    specs:
+      - from: あらためて
+        to: 改めて
+  - expected: ほぐ$1
+    pattern:
+      - /(?<![正分理読誤])解([さしすせそ])/
+    prh: >-
+      平仮名にしたほうが読みやすい漢字は平仮名にする
+    specs:
+      - from: 解さない
+        to: ほぐさない
+      - from: 解して
+        to: ほぐして
+      - from: 解す
+        to: ほぐす
+      - from: 解せば
+        to: ほぐせば
+      - from: 解そう
+        to: ほぐそう
+      - from: 正解
+        to: 正解
+      - from: 分解
+        to: 分解
+      - from: 理解
+        to: 理解
+      - from: 読解
+        to: 読解
+      - from: 誤解
+        to: 誤解
+  - expected: 手引き
+    pattern:
+      - /手引(?!き)/
+    prh: >-
+      送りがなを付けて表記する
+    specs:
+      - from: サーベイ実施の手引を参照
+        to: サーベイ実施の手引きを参照
+      - from: 手引き
+        to: 手引き
+  - expected: レビュアー
+    pattern:
+      - /レビュ(ア(?!ー)|ワー)/
+    prh: >-
+      ‐er、‐or、‐arで終わる単語は「長音あり」、-yで終わる単語は「長音なし」とする（例外あり）
+    specs:
+      - from: レビュア
+        to: レビュアー
+      - from: レビュワー
+        to: レビュアー
+  - expected: ユーザビリティ
+    pattern:
+      - ユーザビリティー
+      - ユーザービリティ
+    prh: >-
+      ‐er、‐or、‐arで終わる単語は「長音あり」、-yで終わる単語は「長音なし」とする（例外あり）
+    specs:
+      - from: ユーザービリティ
+        to: ユーザビリティ
+      - from: ユーザビリティー
+        to: ユーザビリティ
+  - expected: 並$1
+    pattern:
+      - /なら([びぶべ])(?!に)/
+    specs:
+      - from: 横ならび
+        to: 横並び
+      - from: 縦ならび
+        to: 縦並び
+      - from: ならび順
+        to: 並び順
+  - expected: 詳し
+    pattern:
+      - くわし
+    specs:
+      - from: くわしくは
+        to: 詳しくは
+  - expected: にもかかわらず
+    pattern:
+      - /(にも関わらず|にも拘らず|にも係わらず)/
+    prh: >-
+      「にもかかわらず」と平仮名で表記する
+    specs:
+      - from: 入力したにも関わらず
+        to: 入力したにもかかわらず
+      - from: 入力したにも拘らず
+        to: 入力したにもかかわらず
+  - expected: シミュレーション
+    pattern:
+      - シュミレーション
+    specs:
+      - from: シュミレーション
+        to: シミュレーション
+  - expected: 文書配付
+    pattern:
+      - 文書配布
+    specs:
+      - from: 文書配布
+        to: 文書配付
+  - expected: 押せ
+    pattern:
+      - 押下でき
+    prh: >-
+      プロダクト内でユーザーにボタン押下を促す際は「押す」を使用する
+    specs:
+      - from: ボタンを押下できる
+        to: ボタンを押せる
+      - from: ボタンを押下できない
+        to: ボタンを押せない
+  - expected: 押す
+    pattern:
+      - 押下する
+    prh: >-
+      プロダクト内でユーザーにボタン押下を促す際は「押す」を使用する
+    specs:
+      - from: ボタンを押下する
+        to: ボタンを押す
+  - expected: 押さない
+    pattern:
+      - 押下しない
+    prh: >-
+      プロダクト内でユーザーにボタン押下を促す際は「押す」を使用する
+    specs:
+      - from: ボタンを押下しない
+        to: ボタンを押さない
+  - expected: 押せば
+    pattern:
+      - 押下すれば
+    prh: >-
+      プロダクト内でユーザーにボタン押下を促す際は「押す」を使用する
+    specs:
+      - from: ボタンを押下すれば
+        to: ボタンを押せば
+  - expected: 押します
+    pattern:
+      - 押下します
+    prh: >-
+      プロダクト内でユーザーにボタン押下を促す際は「押す」を使用する
+    specs:
+      - from: ボタンを押下します
+        to: ボタンを押します
+  - expected: 押した
+    pattern:
+      - 押下した
+    prh: >-
+      プロダクト内でユーザーにボタン押下を促す際は「押す」を使用する
+    specs:
+      - from: ボタンを押下した
+        to: ボタンを押した
+  - expected: ログイン用メールアドレス
+    pattern:
+      - ログインメールアドレス
+    prh: >-
+      「ログイン用メールアドレス」と表記し、「ログインメールアドレス」は使用しない
+    specs:
+      - from: ログインメールアドレス
+        to: ログイン用メールアドレス
