@@ -5,16 +5,21 @@ import { moduleInterop } from "@textlint/module-interop";
 const presetJaTechnicalWriting = moduleInterop(
   require("textlint-rule-preset-ja-technical-writing"),
 );
+const presetJaSpacing = moduleInterop(
+  require("textlint-rule-preset-ja-spacing"),
+);
 const aiWriting = moduleInterop(
   require("@textlint-ja/textlint-rule-preset-ai-writing"),
 );
 
 // 外部ルールプリセットの中身のルール
 const jaTechnicalWritingRules = presetJaTechnicalWriting.rules;
+const jaSpacingRules = presetJaSpacing.rules;
 const aiWritingRules = aiWriting.rules;
 
 // 外部ルールプリセットの中身のルール設定
 const jaTechnicalWritingRulesConfig = presetJaTechnicalWriting.rulesConfig;
+const jaSpacingRulesConfig = presetJaSpacing.rulesConfig;
 const aiWritingRulesConfig = aiWriting.rulesConfig;
 
 // 外部単体ルールの読み込み
@@ -24,6 +29,7 @@ const preset = {
   rules: {
     // プリセット
     ...jaTechnicalWritingRules,
+    ...jaSpacingRules,
     ...aiWritingRules,
 
     // 単体ルール
@@ -32,6 +38,7 @@ const preset = {
   rulesConfig: {
     // プリセット
     ...jaTechnicalWritingRulesConfig,
+    ...jaSpacingRulesConfig,
     ...aiWritingRulesConfig,
 
     // 単体ルール
